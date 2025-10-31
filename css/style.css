@@ -1,97 +1,106 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
+/* Estilo geral */
 body {
-  background-color: #f5f5f5;
-  color: #222;
-  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  scroll-behavior: smooth;
 }
 
+/* Cabeçalho */
 header {
-  background-color: #111;
-  color: #fff;
-  padding: 20px 0;
+  background: #161b22;
+  padding: 20px;
   text-align: center;
-}
-
-header h1 {
-  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 nav ul {
   list-style: none;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  color: #00bfff;
-}
-
-main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-section {
-  margin-bottom: 60px;
-}
-
-section h2 {
-  margin-bottom: 15px;
-  color: #111;
-  border-bottom: 3px solid #00bfff;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.projetos-container {
+  padding: 0;
+  margin: 10px 0;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
-.projeto {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+nav a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #1f6feb;
+}
+
+/* Sessões */
+section {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #58a6ff;
+  border-bottom: 2px solid #58a6ff;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Projetos */
+.projetos-container {
+  display: grid;
+  gap: 20px;
+}
+
+.projeto-card {
+  background: #161b22;
   padding: 20px;
-  flex: 1 1 300px;
-  transition: transform 0.3s;
+  border-radius: 10px;
+  transition: transform 0.3s, background 0.3s;
 }
 
-.projeto:hover {
-  transform: translateY(-5px);
+.projeto-card:hover {
+  transform: scale(1.05);
+  background: #1c2128;
 }
 
+/* Animações */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efeito de digitação */
+.typing {
+  border-right: 2px solid #58a6ff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Rodapé */
 footer {
-  background-color: #111;
-  color: #fff;
+  background: #161b22;
   text-align: center;
-  padding: 15px 0;
-}
-
-@media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .projetos-container {
-    flex-direction: column;
-  }
+  padding: 15px;
+  color: #8b949e;
 }
