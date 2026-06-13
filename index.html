@@ -1,52 +1,477 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - J. Robson</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== OG TAGS ===== -->
+    <title>Jefferson Robson • IA, Automação & Produtividade</title>
+    <meta name="description" content="Automatize processos, construa agentes de IA e multiplique resultados. Sistemas leves e inteligentes para seu negócio.">
+    <meta property="og:title" content="Jefferson Robson • IA, Automação & Produtividade">
+    <meta property="og:description" content="Automatize processos, construa agentes de IA e multiplique resultados. Sistemas leves e inteligentes para seu negócio.">
+    <meta property="og:image" content="https://crm.solucoes-pagamento.com.br/jefferson.jpg">
+    <meta property="og:url" content="https://crm.solucoes-pagamento.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jefferson Robson • IA, Automação & Produtividade">
+    <meta name="twitter:description" content="Automatize processos, construa agentes de IA e multiplique resultados.">
+
+    <!-- ===== META PIXEL (BASE) ===== -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.agent='plhermes';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        var consent = localStorage.getItem('cookie_consent_tracking');
+        if (consent === null) {
+            window._fbq_pending = true;
+        } else if (consent === 'accepted') {
+            fbq('init', '2367822273743469');
+            fbq('track', 'PageView');
+        }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=2367822273743469&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <!-- ===== GOOGLE TAG MANAGER ===== -->
+    <script>
+        // Consentimento padrão antes do GTM carregar
+        window.dataLayer = window.dataLayer || [];
+        var consent = localStorage.getItem('cookie_consent_tracking');
+        if (consent === 'accepted') {
+            window.dataLayer.push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+        }
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WW87J57V');</script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .font-display { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #020617 100%); }
+
+        /* Cookie banner */
+        #cookie-banner {
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            transform: translateY(0);
+            opacity: 1;
+        }
+        #cookie-banner.hidden-banner {
+            transform: translateY(100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+    /* ROI Calculator */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #10b981;
+            cursor: pointer;
+            border: 2px solid #0f172a;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #10b981;
+            cursor: pointer;
+            border: 2px solid #0f172a;
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1 class="typing">Olá, eu sou o J. Robson 👋</h1>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="bg-slate-950 text-slate-200">
 
-  <section id="sobre" class="fade-in">
-    <h2>Sobre Mim</h2>
-    <p>Sou estudante de Engenharia de Software e apaixonado por tecnologia. Busco me tornar um desenvolvedor altamente cobiçado no mercado, com foco em desenvolvimento web e boas práticas de código.</p>
-  </section>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW87J57V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <section id="projetos" class="fade-in">
-    <h2>Projetos</h2>
-    <div class="projetos-container">
-      <div class="projeto-card">
-        <h3>Portfólio Pessoal</h3>
-        <p>Este é o meu primeiro projeto, desenvolvido com HTML, CSS e JavaScript. Aqui mostro minha evolução como dev!</p>
-      </div>
+    <!-- ===== COOKIE CONSENT BANNER ===== -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[9999] bg-slate-900 border-t border-slate-700/50 p-4 md:p-5 shadow-2xl">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
+            <div class="flex-1 text-sm text-slate-300 leading-relaxed">
+                <p>Este site usa cookies essenciais para funcionar. Para medir a eficácia dos anúncios, usamos cookies do <strong>Meta</strong> e <strong>Google</strong>. <a href="/politica-privacidade" class="text-emerald-400 hover:underline">Saiba mais</a>.</p>
+            </div>
+            <div class="flex items-center gap-3 shrink-0">
+                <button onclick="acceptCookies()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-6 py-2.5 rounded-2xl text-sm transition-colors">Aceitar</button>
+                <button onclick="rejectCookies()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium px-6 py-2.5 rounded-2xl text-sm transition-colors">Recusar</button>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <section id="contato" class="fade-in">
-    <h2>Contato</h2>
-    <ul>
-      <li><a href="mailto:jrobson567@gmail.com">📧 E-mail</a></li>
-      <li><a href="https://github.com/Jefferson-Robson" target="_blank">💼 GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/j-robson-a0466b265" target="_blank">🔗 LinkedIn</a></li>
-    </ul>
-  </section>
+    <script>
+    function acceptCookies() {
+        localStorage.setItem('cookie_consent_tracking', 'accepted');
+        document.getElementById('cookie-banner').classList.add('hidden-banner');
 
-  <footer>
-    <p>© 2025 J. Robson - Todos os direitos reservados.</p>
-  </footer>
+        // Inicializar Meta Pixel se estava pendente
+        if (window._fbq_pending && typeof fbq === 'function') {
+            fbq('init', '2367822273743469');
+            fbq('track', 'PageView');
+            window._fbq_pending = false;
+        }
 
-  <!-- Script JS -->
-  <script src="js/script.js"></script>
+        // Notificar GTM sobre consentimento
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({'event': 'consent_accepted'});
+    }
+
+    function rejectCookies() {
+        localStorage.setItem('cookie_consent_tracking', 'rejected');
+        document.getElementById('cookie-banner').classList.add('hidden-banner');
+        window._fbq_pending = false;
+    }
+
+    // Esconder banner se já decidiu
+    (function() {
+        var consent = localStorage.getItem('cookie_consent_tracking');
+        if (consent !== null) {
+            document.getElementById('cookie-banner').classList.add('hidden-banner');
+        }
+    })();
+    </script>
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-9 h-9 bg-emerald-500 rounded-2xl flex items-center justify-center">
+                        <i class="fa-solid fa-robot text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display font-semibold text-xl tracking-tighter">Jefferson Robson</div>
+                        <div class="text-[10px] text-emerald-400 -mt-1">IA • Automação • Produtividade</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-x-8 text-sm">
+                    <a href="#projetos" class="text-slate-400 hover:text-white">Projetos</a>
+                    <a href="#habilidades" class="text-slate-400 hover:text-white">Habilidades</a>
+                    <a href="/blog/" class="text-slate-400 hover:text-emerald-400 transition-colors">Blog</a>
+                    <a href="#contato" class="text-slate-400 hover:text-white">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero-bg pt-20">
+        <div class="max-w-6xl mx-auto px-6 pt-20 pb-24">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="w-full md:max-w-xl">
+                    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tighter leading-none mb-6">
+                        Construindo o<br>próximo nível de<br><span class="text-emerald-400">produtividade</span>.
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-400 max-w-md">Ajudo profissionais e empresas a automatizar processos, construir agentes de IA e multiplicar resultados.</p>
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-x-4 mt-10">
+                        <a href="#contato" class="inline-flex items-center justify-center px-8 py-4 bg-emerald-500 text-white font-medium rounded-3xl text-lg whitespace-nowrap">Vamos conversar</a>
+                        <a href="#projetos" class="inline-flex items-center justify-center px-8 py-4 border border-slate-700 font-medium rounded-3xl text-lg whitespace-nowrap">Ver projetos</a>
+                    </div>
+                    <div class="flex items-center gap-x-4 mt-8">
+                        <a href="https://www.linkedin.com/in/jefferson-robson-a0466b265/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 text-sm text-slate-500 hover:text-emerald-400 transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <span class="text-slate-700">|</span>
+                        <a href="https://github.com/Jefferson-Robson" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 text-sm text-slate-500 hover:text-emerald-400 transition-colors">
+                            <i class="fa-brands fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="shrink-0">
+                    <div class="relative">
+                        <div class="w-40 sm:w-56 sm:h-56 md:w-64 lg:w-72 h-40 sm:h-56 md:h-64 lg:h-72 rounded-full overflow-hidden border-4 border-emerald-500/30 shadow-2xl shadow-emerald-500/10">
+                            <img src="jefferson.jpg" alt="Jefferson Robson" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-2 -right-2 w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg border-2 border-slate-950">
+                            <i class="fa-solid fa-robot text-white text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJETOS -->
+    <div id="projetos" class="max-w-6xl mx-auto px-6 pt-20">
+        <div class="text-center mb-14">
+            <div class="font-display text-4xl font-semibold tracking-tighter mb-4">Projetos recentes</div>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto">Sistemas, agentes e automações que já estão rodando e gerando resultado.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">\n            <!-- Card 1: Hermes Agent -->\n            <div class="group bg-slate-900 border border-slate-800 hover:border-emerald-500/30 rounded-3xl p-6 transition-all duration-300 flex flex-col">\n                <div class="flex justify-between items-start mb-4">\n                    <div class="w-11 h-11 bg-emerald-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">\n                        <i class="fa-solid fa-robot text-emerald-400 text-xl"></i>\n                    </div>\n                    <span class="text-[11px] bg-emerald-500/10 text-emerald-400 px-2.5 py-0.5 rounded-full whitespace-nowrap">IA • 2025</span>\n                </div>\n                <div class="font-semibold text-xl mb-2 group-hover:text-emerald-400 transition-colors">Hermes Agent</div>\n                <p class="text-slate-400 text-xs leading-relaxed mb-4 flex-1">Agente pessoal de IA que opera 24h no servidor via Telegram — executa código, gerencia automações e interage com APIs.</p>\n                <div class="flex flex-wrap gap-1.5 mb-4">\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">Python</span>\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">OpenAI API</span>\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">Docker</span>\n                </div>\n                <a href="#contato" class="inline-flex items-center gap-x-2 text-xs text-emerald-400 hover:text-emerald-300 transition-colors font-medium">\n                    Saber mais <i class="fa-solid fa-arrow-right text-[10px]"></i>\n                </a>\n            </div>\n\n            <!-- Card 2: CRM Inteligente -->\n            <div class="group bg-slate-900 border border-slate-800 hover:border-violet-500/30 rounded-3xl p-6 transition-all duration-300 flex flex-col">\n                <div class="flex justify-between items-start mb-4">\n                    <div class="w-11 h-11 bg-violet-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">\n                        <i class="fa-solid fa-chart-line text-violet-400 text-xl"></i>\n                    </div>\n                    <span class="text-[11px] bg-violet-500/10 text-violet-400 px-2.5 py-0.5 rounded-full whitespace-nowrap">CRM • 2025</span>\n                </div>\n                <div class="font-semibold text-xl mb-2 group-hover:text-violet-400 transition-colors">CRM Inteligente</div>\n                <p class="text-slate-400 text-xs leading-relaxed mb-4 flex-1">Sistema de gestão com agentes de IA que qualificam leads, analisam conversas e alimentam pipeline de vendas.</p>\n                <div class="flex flex-wrap gap-1.5 mb-4">\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">FastAPI</span>\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">SQLite</span>\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">Agentes IA</span>\n                </div>\n                <a href="https://github.com/Jefferson-Robson/izi-crm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 text-xs text-violet-400 hover:text-violet-300 transition-colors font-medium">\n                    <i class="fa-brands fa-github"></i> Código aberto <i class="fa-solid fa-arrow-right text-[10px]"></i>\n                </a>\n            </div>\n\n            <!-- Card 3: Pipeline de Conteúdo -->\n            <div class="group bg-slate-900 border border-slate-800 hover:border-amber-500/30 rounded-3xl p-6 transition-all duration-300 flex flex-col">\n                <div class="flex justify-between items-start mb-4">\n                    <div class="w-11 h-11 bg-amber-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">\n                        <i class="fa-solid fa-sync text-amber-400 text-xl"></i>\n                    </div>\n                    <span class="text-[11px] bg-amber-500/10 text-amber-400 px-2.5 py-0.5 rounded-full whitespace-nowrap">Automação • 2024</span>\n                </div>\n                <div class="font-semibold text-xl mb-2 group-hover:text-amber-400 transition-colors">Pipeline de Conteúdo</div>\n                <p class="text-slate-400 text-xs leading-relaxed mb-4 flex-1">Sistema automatizado que pesquisa, gera e publica conteúdo com IA — reduzindo horas de produção para minutos.</p>\n                <div class="flex flex-wrap gap-1.5 mb-4">\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">Python</span>\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">IA Generativa</span>\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">Automação</span>\n                </div>\n                <a href="/blog/" class="inline-flex items-center gap-x-2 text-xs text-amber-400 hover:text-amber-300 transition-colors font-medium">\n                    Ver blog funcionando <i class="fa-solid fa-arrow-right text-[10px]"></i>\n                </a>\n            </div>\n\n            <!-- Card 4: Blog Comments API -->\n            <div class="group bg-slate-900 border border-slate-800 hover:border-cyan-500/30 rounded-3xl p-6 transition-all duration-300 flex flex-col">\n                <div class="flex justify-between items-start mb-4">\n                    <div class="w-11 h-11 bg-cyan-500/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">\n                        <i class="fa-solid fa-comments text-cyan-400 text-xl"></i>\n                    </div>\n                    <span class="text-[11px] bg-cyan-500/10 text-cyan-400 px-2.5 py-0.5 rounded-full whitespace-nowrap">API • 2026</span>\n                </div>\n                <div class="font-semibold text-xl mb-2 group-hover:text-cyan-400 transition-colors">Blog Comments API</div>\n                <p class="text-slate-400 text-xs leading-relaxed mb-4 flex-1">API leve para comentários em blogs estáticos com notificação Telegram. Widget embeddável de 7KB — alternativa gratuita ao Disqus.</p>\n                <div class="flex flex-wrap gap-1.5 mb-4">\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">FastAPI</span>\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">SQLite</span>\n                    <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">Telegram Bot</span>\n                </div>\n                <a href="https://github.com/Jefferson-Robson/blog-comments-api" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 text-xs text-cyan-400 hover:text-cyan-300 transition-colors font-medium">\n                    <i class="fa-brands fa-github"></i> Código aberto <i class="fa-solid fa-arrow-right text-[10px]"></i>\n                </a>\n            </div>\n        </div>
+    </div>
+
+    <!-- SOLUÇÕES -->
+    <div id="habilidades" class="max-w-6xl mx-auto px-6 py-20">
+        <div class="text-center mb-14">
+            <div class="font-display text-4xl font-semibold tracking-tighter mb-4">Soluções que entregam resultado real</div>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto">Tecnologia leve, inteligente e focada em acelerar o crescimento do seu negócio — sem servidores caros, sem complexidade desnecessária.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="group bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-emerald-500/30 p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-bolt text-emerald-400 text-2xl"></i>
+                </div>
+                <div class="flex items-start justify-between mb-3">
+                    <div class="font-semibold text-xl">Automação com IA</div>
+                    <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full whitespace-nowrap">-70% tarefas</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">Agentes de IA que automatizam processos, qualificam leads e aceleram decisões. Integração direta com seu CRM e ferramentas atuais. Resultado em semanas, não em meses.</p>
+            </div>
+            <div class="group bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-emerald-500/30 p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-microchip text-emerald-400 text-2xl"></i>
+                </div>
+                <div class="flex items-start justify-between mb-3">
+                    <div class="font-semibold text-xl">Sistemas Sob Medida</div>
+                    <span class="text-xs bg-violet-500/10 text-violet-400 px-3 py-1 rounded-full whitespace-nowrap">ROI rápido</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">Aplicações leves e escaláveis construídas para resolver seu problema específico. Sem bloat, sem assinaturas caras. Tecnoria que cabe no seu orçamento.</p>
+            </div>
+            <div class="group bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 hover:border-emerald-500/30 p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <i class="fa-solid fa-rocket text-emerald-400 text-2xl"></i>
+                </div>
+                <div class="flex items-start justify-between mb-3">
+                    <div class="font-semibold text-xl">Produtividade & Estratégia</div>
+                    <span class="text-xs bg-amber-500/10 text-amber-400 px-3 py-1 rounded-full whitespace-nowrap">+40% entrega</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">Diagnóstico de processos, implantação de ferramentas de IA e automação que multiplicam a capacidade de entrega da sua equipe. Menos reunião, mais execução.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CALCULADORA DE ROI -->
+    <div id="calculadora" class="max-w-4xl mx-auto px-6 pb-8">
+        <div class="text-center mb-12">
+            <div class="font-display text-4xl font-semibold tracking-tighter mb-4">Quanto sua empresa pode economizar com automação?</div>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto">Responda 3 perguntas rápidas e veja em segundos o impacto da automação no seu negócio.</p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-10">
+            <div class="space-y-8">
+                <!-- Pergunta 1 -->
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <label class="text-sm font-medium text-slate-300">Quantos funcionários na sua empresa?</label>
+                        <span class="text-emerald-400 font-semibold text-lg" id="roi-funcionarios-display">5</span>
+                    </div>
+                    <input type="range" id="roi-funcionarios" min="1" max="500" value="5"
+                           class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+                    <div class="flex justify-between text-xs text-slate-500 mt-1">
+                        <span>1</span>
+                        <span>500+</span>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <label class="text-sm font-medium text-slate-300">Horas/semana em tarefas manuais repetitivas?</label>
+                        <span class="text-emerald-400 font-semibold text-lg" id="roi-horas-display">20h</span>
+                    </div>
+                    <input type="range" id="roi-horas" min="1" max="80" value="20"
+                           class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+                    <div class="flex justify-between text-xs text-slate-500 mt-1">
+                        <span>1h</span>
+                        <span>80h</span>
+                    </div>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div>
+                    <div class="flex items-center justify-between mb-3">
+                        <label class="text-sm font-medium text-slate-300">Custo médio por hora da equipe (R$)?</label>
+                        <span class="text-emerald-400 font-semibold text-lg" id="roi-custo-display">R$ 50</span>
+                    </div>
+                    <input type="range" id="roi-custo" min="10" max="200" value="50"
+                           class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-emerald-500">
+                    <div class="flex justify-between text-xs text-slate-500 mt-1">
+                        <span>R$ 10</span>
+                        <span>R$ 200</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resultado -->
+            <div id="roi-resultado" class="mt-10 p-6 md:p-8 bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-2xl">
+                <div class="text-center mb-6">
+                    <div class="text-sm text-emerald-400 font-medium mb-1">Economia mensal estimada</div>
+                    <div class="font-display text-4xl md:text-5xl font-bold text-white" id="roi-economia">R$ 0</div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                    <div class="bg-slate-900/50 rounded-xl p-4">
+                        <div class="text-2xl font-bold text-emerald-400" id="roi-horas-recuperadas">0</div>
+                        <div class="text-xs text-slate-400 mt-1">Horas recuperadas/mês</div>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-xl p-4">
+                        <div class="text-2xl font-bold text-emerald-400" id="roi-produtividade">0%</div>
+                        <div class="text-xs text-slate-400 mt-1">Ganho de produtividade</div>
+                    </div>
+                    <div class="bg-slate-900/50 rounded-xl p-4 col-span-2 md:col-span-1">
+                        <div class="text-2xl font-bold text-emerald-400" id="roi-anual">R$ 0</div>
+                        <div class="text-xs text-slate-400 mt-1">Economia anual</div>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <a href="#contato" class="inline-flex items-center gap-x-2 bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-8 py-3 rounded-2xl text-sm transition-colors">
+                        Quero automatizar <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORMULÁRIO DE CAPTURA -->
+    <div id="contato" class="max-w-3xl mx-auto px-6 pb-16">
+        <div class="text-center mb-10">
+            <div class="font-display text-4xl font-semibold tracking-tighter mb-4">Vamos construir algo juntos?</div>
+            <p class="text-slate-400">Deixe seus dados que entro em contato em até 24h</p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8">
+            <form id="lead-form" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Nome</label>
+                        <input type="text" name="nome" required class="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Empresa</label>
+                        <input type="text" name="empresa" class="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">Email</label>
+                        <input type="email" name="email" required class="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-400 mb-2">WhatsApp / Telegram</label>
+                        <input type="tel" name="telefone" class="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-2">O que você precisa?</label>
+                    <textarea name="mensagem" rows="4" required class="w-full bg-slate-950 border border-slate-700 rounded-3xl px-4 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500 resize-y" placeholder="Ex: Quero automatizar meu processo de vendas..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 transition-colors text-white font-semibold py-4 rounded-3xl text-lg flex items-center justify-center gap-x-2">
+                    <span>Enviar mensagem</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="border-t border-slate-800 py-10 text-center">
+        <div class="flex items-center justify-center gap-x-6 mb-4">
+            <a href="https://www.linkedin.com/in/jefferson-robson-a0466b265/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 hover:bg-emerald-500/20 rounded-2xl flex items-center justify-center text-slate-400 hover:text-emerald-400 transition-all duration-300">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Jefferson-Robson" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 hover:bg-emerald-500/20 rounded-2xl flex items-center justify-center text-slate-400 hover:text-emerald-400 transition-all duration-300">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#contato" class="w-10 h-10 bg-slate-800 hover:bg-emerald-500/20 rounded-2xl flex items-center justify-center text-slate-400 hover:text-emerald-400 transition-all duration-300">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+        <div class="text-xs text-slate-500 space-x-4">
+            <span>© 2026 Jefferson Robson</span>
+            <a href="/politica-privacidade" class="text-slate-400 hover:text-emerald-400 transition-colors">Política de Privacidade</a>
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('lead-form');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>Enviando...</span>`;
+
+            const formData = new FormData(form);
+            const payload = Object.fromEntries(formData.entries());
+
+            try {
+                payload.origem = 'landing_page';
+
+                const response = await fetch('/leads/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    // Redireciona para página de obrigado com tracking pixels
+                    window.location.href = '/obrigado';
+                } else {
+                    throw new Error('Erro ao enviar');
+                }
+            } catch (err) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                alert('Erro ao enviar. Tente novamente ou use o Telegram.');
+            }
+        });
+    // ROI Calculator
+        const roiFunc = document.getElementById('roi-funcionarios');
+        const roiHoras = document.getElementById('roi-horas');
+        const roiCusto = document.getElementById('roi-custo');
+        const roiFuncDisplay = document.getElementById('roi-funcionarios-display');
+        const roiHorasDisplay = document.getElementById('roi-horas-display');
+        const roiCustoDisplay = document.getElementById('roi-custo-display');
+        const roiEconomia = document.getElementById('roi-economia');
+        const roiHorasRecup = document.getElementById('roi-horas-recuperadas');
+        const roiProd = document.getElementById('roi-produtividade');
+        const roiAnual = document.getElementById('roi-anual');
+
+        function calcularROI() {
+            const func = parseInt(roiFunc.value);
+            const horas = parseInt(roiHoras.value);
+            const custo = parseInt(roiCusto.value);
+
+            roiFuncDisplay.textContent = func >= 500 ? '500+' : func;
+            roiHorasDisplay.textContent = horas + 'h';
+            roiCustoDisplay.textContent = 'R$ ' + custo;
+
+            const horasMes = horas * 4.33;
+            const custoMensal = func * horasMes * custo;
+            const economia = custoMensal * 0.7;
+            const horasRecup = Math.round(func * horasMes * 0.7);
+            const anual = economia * 12;
+
+            roiEconomia.textContent = 'R$ ' + economia.toLocaleString('pt-BR', {maximumFractionDigits: 0});
+            roiHorasRecup.textContent = horasRecup.toLocaleString('pt-BR');
+            roiProd.textContent = '+70%';
+            roiAnual.textContent = 'R$ ' + anual.toLocaleString('pt-BR', {maximumFractionDigits: 0});
+        }
+
+        roiFunc.addEventListener('input', calcularROI);
+        roiHoras.addEventListener('input', calcularROI);
+        roiCusto.addEventListener('input', calcularROI);
+        calcularROI();
+    </script>
 </body>
 </html>
