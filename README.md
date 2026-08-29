@@ -1,44 +1,53 @@
-<div align="center">
-  <img src="https://crm.solucoes-pagamento.com.br/jefferson.jpg" width="120" style="border-radius:50%" alt="Jefferson Robson" />
-  <h1>Jefferson Robson • IA, Automação &amp; Produtividade</h1>
-  <p>
-    <a href="https://crm.solucoes-pagamento.com.br">🌐 Site</a> •
-    <a href="https://linkedin.com/in/jefferson-robson">💼 LinkedIn</a> •
-    <a href="https://github.com/Jefferson-Robson">🐙 GitHub</a>
-  </p>
-</div>
+# Portfólio — Robson Lopes
 
-## Sobre
+Site profissional criado para documentar minha transição de carreira e apresentar projetos que conectam tecnologia, processos e negócios.
 
-Site profissional de portfólio com design escuro moderno (Tailwind CSS), desenvolvido para demonstrar habilidades em **IA, automação, sistemas leves e infraestrutura enxuta**.
+## Propósito
 
-### Funcionalidades
+O portfólio não me apresenta como alguém que já concluiu a jornada. Ele mostra a construção: problemas identificados, soluções desenvolvidas, ferramentas aprendidas e resultados alcançados.
 
-- Landing page responsiva com seções de **Projetos**, **Soluções** e **Contato**
-- **Calculadora de ROI** interativa (JavaScript puro, zero dependências)
-- Blog técnico automatizado com pipeline de conteúdo via IA
-- Sistema de comentários próprio com notificação Telegram
-- Pixel Meta + Google Tag Manager para marketing digital
-- Banner de consentimento LGPD
-- Páginas: Obrigado (pós-lead) e Política de Privacidade
+## Conteúdo
 
-## Stack
+- Apresentação e trajetória profissional
+- Pilares de Software, IA e Automação
+- Projetos e estudos de caso
+- Canais profissionais de contato
+- Primeiro projeto: Assistente inteligente de agenda
 
-| Camada | Tecnologia |
-|--------|-----------|
-| Frontend | HTML5, CSS3, JavaScript, Tailwind CSS (CDN) |
-| Ícones | Font Awesome 6 |
-| Fontes | Inter + DM Sans (Google Fonts) |
-| Backend (blog) | FastAPI + SQLite |
-| Infraestrutura | Nginx, Docker, Cloudflare Tunnel |
-| Marketing | Meta Pixel, Google Tag Manager, GA4 |
+## Tecnologias
 
-## Repositórios Relacionados
+- React
+- TypeScript
+- Vinext
+- CSS responsivo
+- Lucide Icons
 
-- [izi-crm](https://github.com/Jefferson-Robson/izi-crm) — CRM inteligente com agentes de IA
-- [blog-comments-api](https://github.com/Jefferson-Robson/blog-comments-api) — API de comentários com notificação Telegram
-- [pix-to-crypto-demo](https://github.com/Jefferson-Robson/pix-to-crypto-demo) — Conversão PIX para criptomoedas
+## Executar localmente
 
-## Licença
+```bash
+npm install
+npm run dev
+```
 
-MIT — Sinta-se livre para usar como referência.
+Para gerar a versão de produção:
+
+```bash
+npm run build
+```
+
+## Projeto em destaque
+
+### Assistente inteligente de agenda
+
+Ferramenta em desenvolvimento para facilitar a rotina de equipes, permitindo consultar horários e organizar compromissos por conversa, com integração ao Google Calendar.
+
+## Status
+
+Primeira versão do portfólio concluída. Contatos, conteúdo principal e apresentação do projeto inicial já estão implementados.
+
+## Contato
+
+- [LinkedIn](https://www.linkedin.com/in/jefferson-robson-a0466b265/)
+- [GitHub](https://github.com/Jefferson-Robson)
+- [WhatsApp](https://wa.me/5511953424035)
+
