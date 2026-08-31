@@ -92,7 +92,20 @@ export default function Home() {
               <li><CheckCircle2 size={17} /> Agenda centralizada e atualizada</li>
               <li><CheckCircle2 size={17} /> Atendimento por aplicativos de mensagem</li>
             </ul>
-            <div className="tech-row"><span>Python</span><span>Google Calendar API</span><span>IA</span><span>Automação</span></div>
+            <div className="tech-row">
+              <span>Python</span>
+              <span>Google Calendar API</span>
+              <span>IA</span>
+              <span>Automação</span>
+            </div>
+
+            <a
+              className="project-link"
+              href="/projetos/assistente-agenda/"
+            >
+              Ver estudo de caso
+              <ArrowUpRight size={16} />
+            </a>
           </div>
           <div className="project-visual" aria-label="Representação visual do assistente de agenda">
             <div className="calendar-card">
