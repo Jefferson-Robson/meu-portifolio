@@ -99,6 +99,28 @@ h1 em { color: #7fb2ff; font-family: Georgia, serif; font-weight: 400; }
 .project-copy li svg { color: var(--blue); }
 .tech-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
 .tech-row span { padding: 7px 10px; border: 1px solid var(--line); color: var(--muted); font-size: 10px; font-weight: 800; }
+.project-link {
+  width: fit-content;
+  min-height: 45px;
+  margin-top: 24px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+.project-link:hover {
+  transform: translateY(-2px);
+  background: var(--blue-dark);
+}
 .project-visual { min-height: 480px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 40px; background: linear-gradient(145deg, #0d2e52, #146fe7); }
 .project-visual::before { content: ""; position: absolute; width: 320px; height: 320px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.04), 0 0 0 110px rgba(255,255,255,.03); }
 .calendar-card { position: relative; z-index: 1; width: 100%; padding: 22px; background: white; box-shadow: 0 25px 60px rgba(0,0,0,.28); }
