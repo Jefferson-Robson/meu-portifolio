@@ -2,11 +2,12 @@ import {
   ArrowDownRight, ArrowUpRight, Bot, CalendarCheck2, CheckCircle2,
   Code2, GitBranch, MessageCircle, Network, Sparkles, Workflow,
 } from "lucide-react";
+import Image from "next/image";
 
 const pillars = [
-  { icon: Code2, title: "Software", text: "Soluções simples, bem estruturadas e pensadas para problemas reais." },
-  { icon: Bot, title: "Inteligência artificial", text: "IA aplicada com propósito: apoiar pessoas, decisões e rotinas de trabalho." },
-  { icon: Workflow, title: "Processos e automação", text: "Menos tarefas repetitivas, mais clareza e tempo para o que gera resultado." },
+  { icon: Code2, title: "Software útil", text: "Ferramentas simples, bem estruturadas e pensadas para resolver problemas reais." },
+  { icon: Bot, title: "IA aplicada", text: "Inteligência artificial com propósito: apoiar pessoas, decisões e rotinas de trabalho." },
+  { icon: Workflow, title: "Automação de processos", text: "Menos tarefas repetitivas, mais clareza e tempo para o que gera resultado." },
 ];
 
 export default function Home() {
@@ -30,26 +31,31 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <div className="eyebrow"><span className="status-dot" /> Em transição, construindo na prática</div>
-          <h1>Tecnologia para transformar <em>processos</em> em resultados.</h1>
+          <div className="eyebrow"><span className="status-dot" /> Software · Automação · IA aplicada</div>
+          <h1>Tecnologia que reduz atritos e faz a <em>operação</em> avançar.</h1>
           <p className="hero-text">
-            Sou Robson Lopes, estudante de Engenharia de Software. Estou construindo uma carreira entre
-            tecnologia e negócios, desenvolvendo soluções que tornam o trabalho mais simples, inteligente e eficiente.
+            Sou Robson Lopes. Desenvolvo soluções digitais para transformar processos manuais,
+            rotinas confusas e tarefas repetitivas em trabalho mais simples, organizado e eficiente.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="#projetos">Conhecer projetos <ArrowDownRight size={18} /></a>
-            <a className="button ghost" href="#sobre">Minha jornada</a>
+            <a className="button primary" href="#projetos">Ver soluções <ArrowDownRight size={18} /></a>
+            <a className="button ghost" href="#sobre">Como eu trabalho</a>
           </div>
-          <div className="hero-proof"><span>Engenharia de Software</span><span>Automação</span><span>IA aplicada</span></div>
+          <div className="hero-proof"><span>Sistemas úteis</span><span>Automação</span><span>IA aplicada</span></div>
         </div>
         <div className="portrait-wrap">
-          <div className="portrait-frame portrait-monogram" aria-label="Monograma de Robson Lopes">
-            <span>RL</span>
-            <small>Tecnologia · Processos · Negócios</small>
+          <div className="portrait-frame">
+            <Image
+              src="/images/robson-lopes.png"
+              alt="Robson Lopes"
+              fill
+              priority
+              sizes="(max-width: 900px) 86vw, 440px"
+            />
           </div>
           <div className="portrait-card">
             <Sparkles size={17} />
-            <div><strong>Aprender. Aplicar. Documentar.</strong><span>Uma evolução construída em público.</span></div>
+            <div><strong>Começo pelo trabalho real.</strong><span>Depois, transformo o problema em solução.</span></div>
           </div>
         </div>
       </section>
@@ -58,18 +64,18 @@ export default function Home() {
         <div className="section-number">01 / SOBRE</div>
         <div className="manifesto-copy">
           <p className="lead">
-            Não estou aqui para fingir que já cheguei. Estou aqui para mostrar o processo de construir
-            uma carreira capaz de conectar tecnologia, operação e visão de negócio.
+            As melhores soluções não começam pela ferramenta. Começam entendendo onde o trabalho
+            perde tempo, clareza e ritmo.
           </p>
           <div className="two-columns">
-            <p>Minha experiência no operacional me ensinou a enxergar onde o trabalho trava, se repete ou depende demais de esforço manual. Na Engenharia de Software, estou aprendendo a transformar essas observações em sistemas e automações úteis.</p>
-            <p>Este portfólio é o registro dos projetos, aprendizados, erros e resultados dessa transição. Cada projeto nasce de uma pergunta: como a tecnologia pode facilitar o trabalho de alguém?</p>
+            <p>Minha experiência em operação me ensinou a identificar gargalos, tarefas repetitivas e pontos em que a informação se perde. É desse contexto que surgem as soluções que construo.</p>
+            <p>Uno desenvolvimento de software, automação e inteligência artificial para criar ferramentas claras, viáveis e alinhadas à rotina de quem vai usá-las.</p>
           </div>
         </div>
       </section>
 
       <section className="pillars-section">
-        <div className="section-intro"><span>O que estou construindo</span><h2>Conhecimento que sai da teoria e entra na operação.</h2></div>
+        <div className="section-intro"><span>Como eu trabalho</span><h2>Do gargalo operacional a uma solução que funciona no dia a dia.</h2></div>
         <div className="pillars-grid">
           {pillars.map(({ icon: Icon, title, text }, index) => (
             <article className="pillar" key={title}>
@@ -84,7 +90,7 @@ export default function Home() {
         <div className="section-number">02 / PROJETOS</div>
         <div className="project-featured">
           <div className="project-copy">
-            <div className="project-label"><span>EM DESENVOLVIMENTO</span><span>PROJETO 01</span></div>
+            <div className="project-label"><span>EM CONSTRUÇÃO</span><span>PROJETO 01</span></div>
             <h2>Assistente inteligente de agenda</h2>
             <p>Uma ferramenta para facilitar a rotina de equipes: consultar a agenda, organizar compromissos e realizar agendamentos por conversa, conectada ao Google Calendar.</p>
             <ul>
@@ -120,9 +126,9 @@ export default function Home() {
       </section>
 
       <section className="contact" id="contato">
-        <div><span className="section-number">03 / CONTATO</span><h2>Vamos transformar uma rotina em uma solução?</h2></div>
+        <div><span className="section-number">03 / CONTATO</span><h2>Tem um processo travando sua operação?</h2></div>
         <div className="contact-copy">
-          <p>Estou aberto a trocar ideias sobre tecnologia, processos, automação e oportunidades para construir projetos que gerem resultado real.</p>
+          <p>Vamos conversar sobre automação, software, inteligência artificial e soluções que tragam mais clareza para o trabalho.</p>
           <div className="contact-links" aria-label="Canais de contato">
             <a
               className="contact-primary"
@@ -144,7 +150,7 @@ export default function Home() {
 
       <footer>
         <a className="brand" href="#inicio">RL<span>.</span></a>
-        <p>Construindo uma carreira entre tecnologia e negócios.</p>
+        <p>Software, automação e IA aplicada à operação.</p>
         <span>© 2026 Robson Lopes</span>
       </footer>
     </main>
