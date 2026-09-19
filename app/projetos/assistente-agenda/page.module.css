@@ -597,6 +597,10 @@
   box-shadow: 0 0 0 5px rgba(86, 219, 154, 0.14);
 }
 
+.done {
+  background: #d7e2ee;
+}
+
 .next {
   background: #6aa6ff;
 }
