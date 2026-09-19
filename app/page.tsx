@@ -48,7 +48,7 @@ export default function Home() {
         <div className="portrait-wrap">
           <div className="portrait-frame">
             <Image
-              src="/images/robson-lopes.png"
+              src="/images/robson-lopes.webp"
               alt="Robson Lopes"
               fill
               priority
