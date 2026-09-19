@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Assistente de Agenda — Staging | Robson Lopes",
+  title: "Assistente de Agenda — Staging",
   description: "Piloto restrito de agendamento pelo Telegram com integração ao Google Calendar.",
 };
 
