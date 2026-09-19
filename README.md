@@ -1,67 +1,62 @@
-# Portfólio — Robson Lopes
+# Portfólio — Jefferson Robson
 
-Portfólio profissional de Robson Lopes, com foco em soluções de software, automação e inteligência artificial aplicadas à operação.
+Portfólio profissional dedicado a projetos de **software, inteligência artificial, automação e processos**.
 
 ## Propósito
 
-O site apresenta uma proposta direta: identificar gargalos operacionais e transformá-los em ferramentas digitais simples, organizadas e úteis para o dia a dia.
+Apresentar soluções e estudos de caso que mostram como a tecnologia pode simplificar rotinas, organizar processos e ajudar negócios a funcionarem melhor.
 
-## Posicionamento
-
-O portfólio foi atualizado para destacar entrega e visão operacional, substituindo a narrativa de transição de carreira.
-
-- Mensagem principal: **Tecnologia que reduz atritos e faz a operação avançar.**
-- Foco: software útil, automação de processos e IA aplicada.
-- Diferencial: experiência operacional usada para entender o contexto antes de definir a solução.
-- Linguagem: orientada a problemas reais, clareza e eficiência no trabalho.
+> **Tecnologia para negócios funcionarem melhor.**
 
 ## Conteúdo
 
-- Apresentação profissional e proposta de valor
-- Método de trabalho: gargalo operacional → solução digital
-- Pilares de software útil, automação e IA aplicada
+- Apresentação profissional e áreas de atuação
 - Projetos e estudos de caso
+- Aplicações práticas de software, IA e automação
+- Conteúdos publicados no blog
 - Canais profissionais de contato
-- Primeiro projeto: Assistente inteligente de agenda
-- Foto profissional na seção de abertura
+
+## Projeto em destaque
+
+### Assistente inteligente de agenda
+
+Solução em desenvolvimento para consultar horários, organizar compromissos e realizar agendamentos por conversa, com integração ao Google Calendar e a aplicativos de mensagens.
 
 ## Tecnologias
 
-- React
+- Next.js 16
+- React 19
 - TypeScript
-- Vinext
-- CSS responsivo
-- Lucide Icons
+- CSS Modules
+- Lucide React
 
 ## Executar localmente
+
+Requisitos: Node.js 22 ou superior.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Para gerar a versão de produção:
+A aplicação estará disponível em `http://localhost:3000`.
+
+Para verificar e gerar a versão de produção:
 
 ```bash
+npm run lint
 npm run build
 ```
 
-## Projeto em destaque
-
-### Assistente inteligente de agenda
-
-Ferramenta em desenvolvimento para facilitar a rotina de equipes, permitindo consultar horários e organizar compromissos por conversa, com integração ao Google Calendar.
-
 ## Publicação
 
-O site é publicado pelo GitHub Pages. Todo push para a branch `main` executa o workflow [deploy-pages.yml](.github/workflows/deploy-pages.yml), gera a versão estática em `out/` e atualiza o site automaticamente.
+O site é exportado de forma estática e publicado automaticamente no GitHub Pages por meio do workflow [deploy-pages.yml](.github/workflows/deploy-pages.yml) a cada atualização da branch `main`.
 
-## Status
+Acesse: [robsonlopes.tec.br](https://robsonlopes.tec.br)
 
-Versão atual concluída com novo posicionamento, foto profissional, contatos e estudo de caso inicial.
+## Links
 
-## Contato
-
+- [Blog](https://blog.robsonlopes.tec.br)
 - [LinkedIn](https://www.linkedin.com/in/jefferson-robson-a0466b265/)
 - [GitHub](https://github.com/Jefferson-Robson)
-- [WhatsApp](https://wa.me/5511953424035)
+- [YouTube](https://www.youtube.com/@RobsonLopesTec)
