@@ -16,7 +16,7 @@ import {
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Assistente inteligente de agenda | Robson Lopes",
+  title: "Assistente de agenda",
   description:
     "Estudo de caso de um assistente conectado ao Google Calendar para consultar horários e realizar agendamentos por aplicativos de mensagem.",
 };
@@ -31,8 +31,8 @@ const flow = [
   {
     icon: Bot,
     number: "02",
-    title: "Intenção identificada",
-    text: "O assistente interpreta a solicitação e confirma as informações necessárias.",
+    title: "Solicitação interpretada",
+    text: "O sistema identifica os dados necessários e pede confirmação antes de criar o compromisso.",
   },
   {
     icon: CalendarCheck2,
@@ -52,7 +52,7 @@ const architecture = [
   {
     icon: MessageCircle,
     title: "Canal de entrada",
-    text: "WhatsApp ou Telegram recebe a solicitação.",
+    text: "O Telegram recebe a solicitação de participantes autorizados no piloto.",
   },
   {
     icon: Workflow,
@@ -61,8 +61,8 @@ const architecture = [
   },
   {
     icon: Bot,
-    title: "Interpretação",
-    text: "A camada inteligente entende a intenção do usuário.",
+    title: "Interpretação por regras",
+    text: "Formatos definidos transformam a mensagem em dados de agendamento.",
   },
   {
     icon: CalendarCheck2,
@@ -73,22 +73,22 @@ const architecture = [
 
 const roadmap = [
   {
-    status: "current",
+    status: "done",
     phase: "Fase 01",
     title: "Descoberta e arquitetura",
     text: "Definição do problema, público, fluxo de conversa e escopo do MVP.",
   },
   {
-    status: "next",
+    status: "current",
     phase: "Fase 02",
-    title: "Protótipo funcional",
-    text: "Integração inicial com Google Calendar e primeiro canal de mensagens.",
+    title: "MVP funcional",
+    text: "Telegram e Google Calendar integrados para consultar, confirmar, criar e cancelar compromissos.",
   },
   {
-    status: "future",
+    status: "next",
     phase: "Fase 03",
-    title: "Validação na operação",
-    text: "Uso controlado por colaboradores e coleta de dificuldades reais.",
+    title: "Validação controlada",
+    text: "Uso por participantes autorizados, acompanhamento de dúvidas e melhoria da experiência.",
   },
   {
     status: "future",
@@ -118,13 +118,13 @@ export default function AssistenteAgendaPage() {
         <div className={styles.heroContent}>
           <div className={styles.status}>
             <span />
-            Projeto em desenvolvimento
+            MVP funcional · piloto restrito
           </div>
 
-          <p className={styles.kicker}>PROJETO 01 · AUTOMAÇÃO E IA</p>
+          <p className={styles.kicker}>PROJETO 01 · AUTOMAÇÃO E INTEGRAÇÕES</p>
 
           <h1>
-            Assistente inteligente <em>de agenda.</em>
+            Assistente <em>de agenda.</em>
           </h1>
 
           <p className={styles.heroText}>
@@ -237,7 +237,7 @@ export default function AssistenteAgendaPage() {
 
       <section className={styles.solutionSection} id="solucao">
         <div className={styles.sectionHeading}>
-          <div className={styles.sectionLabel}>02 / SOLUÇÃO PROPOSTA</div>
+          <div className={styles.sectionLabel}>02 / SOLUÇÃO ATUAL</div>
           <h2>Transformar uma conversa em uma ação organizada.</h2>
           <p>
             O usuário não precisa aprender uma nova ferramenta. Ele conversa
@@ -262,10 +262,10 @@ export default function AssistenteAgendaPage() {
       <section className={styles.architectureSection}>
         <div className={styles.sectionHeading}>
           <div className={styles.sectionLabel}>03 / ARQUITETURA DO MVP</div>
-          <h2>Uma estrutura simples para validar rápido.</h2>
+          <h2>Uma estrutura simples, funcional e pronta para evoluir.</h2>
           <p>
-            A primeira versão será pequena o suficiente para ser construída e
-            testada, mas organizada para permitir evolução futura.
+            O piloto prioriza um fluxo seguro e controlado, mantendo uma base
+            organizada para a evolução do produto.
           </p>
         </div>
 
@@ -287,23 +287,23 @@ export default function AssistenteAgendaPage() {
           <div>
             <strong>Privacidade desde a arquitetura</strong>
             <p>
-              O acesso à agenda deverá usar autorização individual, permissões
-              mínimas e registro seguro das operações realizadas.
+              O acesso à agenda usa autorização OAuth do responsável, controle
+              de participantes e registros técnicos para acompanhamento do piloto.
             </p>
           </div>
         </div>
       </section>
 
       <section className={styles.scopeSection}>
-        <div className={styles.sectionLabel}>04 / ESCOPO INICIAL</div>
+        <div className={styles.sectionLabel}>04 / O QUE JÁ FUNCIONA</div>
 
         <div className={styles.scopeContent}>
           <div>
-            <h2>O que precisa funcionar no primeiro MVP.</h2>
+            <h2>Uma base real para aprender com o uso.</h2>
             <p>
-              O objetivo inicial não é criar uma plataforma gigantesca. É
-              resolver bem uma rotina específica e validar seu uso por pessoas
-              reais.
+              O objetivo não é criar uma plataforma gigantesca de uma vez. É
+              resolver uma rotina específica, observar o uso e evoluir com
+              decisões baseadas em problemas reais.
             </p>
           </div>
 
@@ -318,15 +318,15 @@ export default function AssistenteAgendaPage() {
             </li>
             <li>
               <CheckCircle2 size={19} />
-              Confirmar os dados antes do agendamento
+              Solicitar confirmação antes de criar o compromisso
             </li>
             <li>
               <CheckCircle2 size={19} />
-              Responder pelo canal de mensagem utilizado
+              Responder e acompanhar solicitações pelo Telegram
             </li>
             <li>
               <CheckCircle2 size={19} />
-              Registrar erros e operações importantes
+              Cancelar agendamentos vinculados ao próprio solicitante
             </li>
           </ul>
         </div>
@@ -337,8 +337,8 @@ export default function AssistenteAgendaPage() {
           <div className={styles.sectionLabel}>05 / ROADMAP</div>
           <h2>Construção documentada, etapa por etapa.</h2>
           <p>
-            Este estudo de caso será atualizado conforme o projeto avançar da
-            ideia para um produto usado na operação.
+            Este estudo de caso acompanha uma construção em público: problema,
+            processo, teste, aprendizado e evolução do produto.
           </p>
         </div>
 
@@ -361,8 +361,8 @@ export default function AssistenteAgendaPage() {
 
       <section className={styles.cta}>
         <div>
-          <span>PROJETO EM CONSTRUÇÃO</span>
-          <h2>Da rotina operacional para uma solução real.</h2>
+          <span>MVP EM EVOLUÇÃO</span>
+          <h2>Da ideia a uma ferramenta em validação.</h2>
         </div>
 
         <div>
