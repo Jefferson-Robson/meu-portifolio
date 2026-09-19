@@ -16,7 +16,9 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Ir para o início">RL<span>.</span></a>
         <nav aria-label="Navegação principal">
-          <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a>
+          <a href="#sobre">Sobre</a><a href="#projetos">Projetos</a>
+          <a href="https://blog.robsonlopes.tec.br" target="_blank" rel="noreferrer">Blog</a>
+          <a href="#contato">Contato</a>
         </nav>
         <a
           className="header-cta"
@@ -31,17 +33,17 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <div className="eyebrow"><span className="status-dot" /> Software · Automação · IA aplicada</div>
-          <h1>Tecnologia que reduz atritos e faz a <em>operação</em> avançar.</h1>
+          <div className="eyebrow"><span className="status-dot" /> Tecnologia aplicada · processos · automação</div>
+          <h1>Tecnologia para tornar processos mais <em>claros</em> e eficientes.</h1>
           <p className="hero-text">
-            Sou Robson Lopes. Desenvolvo soluções digitais para transformar processos manuais,
+            Sou Robson Lopes. Construo soluções digitais para transformar processos manuais,
             rotinas confusas e tarefas repetitivas em trabalho mais simples, organizado e eficiente.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#projetos">Ver soluções <ArrowDownRight size={18} /></a>
-            <a className="button ghost" href="#sobre">Como eu trabalho</a>
+            <a className="button ghost" href="https://blog.robsonlopes.tec.br" target="_blank" rel="noreferrer">Ler o blog</a>
           </div>
-          <div className="hero-proof"><span>Sistemas úteis</span><span>Automação</span><span>IA aplicada</span></div>
+          <div className="hero-proof"><span>Sistemas úteis</span><span>Processos claros</span><span>Automação</span></div>
         </div>
         <div className="portrait-wrap">
           <div className="portrait-frame">
@@ -55,7 +57,7 @@ export default function Home() {
           </div>
           <div className="portrait-card">
             <Sparkles size={17} />
-            <div><strong>Começo pelo trabalho real.</strong><span>Depois, transformo o problema em solução.</span></div>
+            <div><strong>Começo por problemas reais.</strong><span>Depois, transformo o aprendizado em solução.</span></div>
           </div>
         </div>
       </section>
@@ -68,14 +70,14 @@ export default function Home() {
             perde tempo, clareza e ritmo.
           </p>
           <div className="two-columns">
-            <p>Minha experiência em operação me ensinou a identificar gargalos, tarefas repetitivas e pontos em que a informação se perde. É desse contexto que surgem as soluções que construo.</p>
+            <p>Minha experiência com processos me ensinou a identificar gargalos, tarefas repetitivas e pontos em que a informação se perde. É desse contexto que surgem as soluções que construo.</p>
             <p>Uno desenvolvimento de software, automação e inteligência artificial para criar ferramentas claras, viáveis e alinhadas à rotina de quem vai usá-las.</p>
           </div>
         </div>
       </section>
 
       <section className="pillars-section">
-        <div className="section-intro"><span>Como eu trabalho</span><h2>Do gargalo operacional a uma solução que funciona no dia a dia.</h2></div>
+        <div className="section-intro"><span>Como eu trabalho</span><h2>De um problema real a uma solução que funciona no dia a dia.</h2></div>
         <div className="pillars-grid">
           {pillars.map(({ icon: Icon, title, text }, index) => (
             <article className="pillar" key={title}>
@@ -90,19 +92,19 @@ export default function Home() {
         <div className="section-number">02 / PROJETOS</div>
         <div className="project-featured">
           <div className="project-copy">
-            <div className="project-label"><span>EM CONSTRUÇÃO</span><span>PROJETO 01</span></div>
-            <h2>Assistente inteligente de agenda</h2>
-            <p>Uma ferramenta para facilitar a rotina de equipes: consultar a agenda, organizar compromissos e realizar agendamentos por conversa, conectada ao Google Calendar.</p>
+            <div className="project-label"><span>MVP FUNCIONAL · EM VALIDAÇÃO</span><span>PROJETO 01</span></div>
+            <h2>Assistente de agenda</h2>
+            <p>Uma ferramenta para consultar horários, criar compromissos e organizar a agenda por conversa. O piloto já funciona com Telegram e Google Calendar.</p>
             <ul>
-              <li><CheckCircle2 size={17} /> Uso simples no dia a dia</li>
-              <li><CheckCircle2 size={17} /> Agenda centralizada e atualizada</li>
-              <li><CheckCircle2 size={17} /> Atendimento por aplicativos de mensagem</li>
+              <li><CheckCircle2 size={17} /> Integração ativa com Telegram</li>
+              <li><CheckCircle2 size={17} /> Consulta e criação de eventos no Google Calendar</li>
+              <li><CheckCircle2 size={17} /> Uso controlado para validar a experiência</li>
             </ul>
             <div className="tech-row">
               <span>Python</span>
+              <span>FastAPI</span>
+              <span>Telegram</span>
               <span>Google Calendar API</span>
-              <span>IA</span>
-              <span>Automação</span>
             </div>
 
             <a
@@ -116,7 +118,7 @@ export default function Home() {
           <div className="project-visual" aria-label="Representação visual do assistente de agenda">
             <div className="calendar-card">
               <div className="calendar-head"><div><CalendarCheck2 size={19} /><strong>Agenda da equipe</strong></div><span>Hoje</span></div>
-              <div className="meeting active"><time>09:00</time><div><strong>Alinhamento diário</strong><span>Equipe de operações</span></div></div>
+              <div className="meeting active"><time>09:00</time><div><strong>Alinhamento diário</strong><span>Equipe</span></div></div>
               <div className="meeting"><time>11:30</time><div><strong>Revisão de processo</strong><span>30 minutos</span></div></div>
               <div className="meeting"><time>15:00</time><div><strong>Horário disponível</strong><span>Livre para agendamento</span></div></div>
             </div>
@@ -126,9 +128,9 @@ export default function Home() {
       </section>
 
       <section className="contact" id="contato">
-        <div><span className="section-number">03 / CONTATO</span><h2>Tem um processo travando sua operação?</h2></div>
+        <div><span className="section-number">03 / CONTATO</span><h2>Tem um processo que pode ser mais simples?</h2></div>
         <div className="contact-copy">
-          <p>Vamos conversar sobre automação, software, inteligência artificial e soluções que tragam mais clareza para o trabalho.</p>
+          <p>Vamos conversar sobre processos, automação, software e soluções que tragam mais clareza para o trabalho.</p>
           <div className="contact-links" aria-label="Canais de contato">
             <a
               className="contact-primary"
@@ -150,7 +152,7 @@ export default function Home() {
 
       <footer>
         <a className="brand" href="#inicio">RL<span>.</span></a>
-        <p>Software, automação e IA aplicada à operação.</p>
+        <p>Tecnologia aplicada, processos e automação.</p>
         <span>© 2026 Robson Lopes</span>
       </footer>
     </main>
