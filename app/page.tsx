@@ -125,6 +125,16 @@ export default function Home() {
             <div className="chat-bubble"><MessageCircle size={18} /><p>“Agende uma reunião com o time amanhã às 15h.”</p></div>
           </div>
         </div>
+        <article className="project-lab">
+          <div>
+            <div className="project-label"><span>LABORATÓRIO DE CONTEÚDO · EM DESENVOLVIMENTO</span><span>PROJETO 02</span></div>
+            <h3>Robson Crypto Lab</h3>
+            <p>Um espaço para estudar Bitcoin, cripto, trading e tecnologia na prática. Registro testes de estratégias, análises de dados e aprendizados sobre o mercado com transparência, sem promessas de lucro.</p>
+          </div>
+          <a className="project-link" href="https://www.youtube.com/@RobsonCryptoLab" target="_blank" rel="noopener noreferrer">
+            Conhecer o canal <ArrowUpRight size={16} />
+          </a>
+        </article>
       </section>
 
       <section className="contact" id="contato">
