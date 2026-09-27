@@ -136,6 +136,13 @@ h1 em { color: #7fb2ff; font-family: Georgia, serif; font-weight: 400; }
 .chat-bubble { position: absolute; z-index: 2; right: 17px; bottom: 24px; width: 235px; display: flex; align-items: flex-start; gap: 10px; padding: 15px; background: #102336; color: white; box-shadow: 0 12px 30px rgba(0,0,0,.3); }
 .chat-bubble p { margin: 0; font-size: 11px; line-height: 1.5; }
 
+
+.project-lab { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 32px; margin-top: 22px; padding: 34px 42px; border: 1px solid var(--line); background: #e8edf4; }
+.project-lab .project-label { margin-bottom: 18px; }
+.project-lab h3 { margin: 0; font-size: clamp(25px, 3vw, 36px); letter-spacing: -.035em; }
+.project-lab p { max-width: 690px; margin: 12px 0 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.project-lab .project-link { margin-top: 0; white-space: nowrap; }
+
 .contact { display: grid; grid-template-columns: 1.05fr .95fr; gap: 80px; padding: 100px 32px; border-top: 1px solid var(--line); }
 .contact h2 { max-width: 650px; margin: 22px 0 0; font-size: clamp(38px, 4.8vw, 64px); line-height: 1.02; letter-spacing: -.05em; }
 .contact-copy > p { margin: 27px 0 32px; color: var(--muted); font-size: 16px; line-height: 1.75; }
@@ -160,6 +167,8 @@ footer > span { justify-self: end; color: #77838d; font-size: 11px; }
   .pillar { min-height: 240px; }
   .pillar h3 { margin-top: 48px; }
   .project-featured { grid-template-columns: 1fr; padding: 28px; gap: 40px; }
+  .project-lab { grid-template-columns: 1fr; padding: 28px; }
+  .project-lab .project-link { margin-top: 0; }
   .contact { grid-template-columns: 1fr; gap: 30px; padding: 80px 22px; }
 }
 
@@ -175,6 +184,7 @@ footer > span { justify-self: end; color: #77838d; font-size: 11px; }
   .pillars-section { padding: 80px 22px; }
   .projects { padding: 85px 14px; }
   .project-featured { padding: 24px 18px; }
+  .project-lab { padding: 24px 18px; }
   .project-visual { min-height: 400px; padding: 18px; }
   .chat-bubble { right: 8px; bottom: 12px; }
   footer { grid-template-columns: 1fr auto; padding: 28px 22px; }
