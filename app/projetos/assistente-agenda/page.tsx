@@ -26,7 +26,7 @@ const flow = [
     icon: MessageCircle,
     number: "01",
     title: "Mensagem recebida",
-    text: "O usuário solicita uma consulta ou agendamento usando linguagem natural.",
+    text: "O usuário solicita uma consulta ou agendamento por mensagem, seguindo os formatos aceitos pelo piloto.",
   },
   {
     icon: Bot,
