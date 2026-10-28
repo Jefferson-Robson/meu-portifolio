@@ -150,6 +150,7 @@ export default function Home() {
             >
               <MessageCircle size={19} /> Conversar pelo WhatsApp <ArrowUpRight size={16} />
             </a>
+            <a href="mailto:suporte@robsonlopes.tec.br">suporte@robsonlopes.tec.br <ArrowUpRight size={14} /></a>
             <a href="https://www.linkedin.com/in/jefferson-robson-a0466b265/" target="_blank" rel="noreferrer">
               <Network size={18} /> LinkedIn <ArrowUpRight size={14} />
             </a>
