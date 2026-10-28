@@ -22,6 +22,12 @@ Apresentar soluções e estudos de caso que mostram como a tecnologia pode simpl
 
 Solução em desenvolvimento para consultar horários, organizar compromissos e realizar agendamentos por conversa, com integração ao Google Calendar e a aplicativos de mensagens.
 
+## Robson Crypto Lab
+
+Laboratório de conteúdo em desenvolvimento sobre Bitcoin, cripto e tecnologia, com foco em testes, análise de dados e documentação de aprendizados.
+
+Canal: https://www.youtube.com/@RobsonCryptoLab
+
 ## Tecnologias
 
 - Next.js 16
