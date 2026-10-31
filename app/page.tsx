@@ -1,6 +1,6 @@
 import {
   ArrowDownRight, ArrowUpRight, Bot, CalendarCheck2, CheckCircle2,
-  Code2, GitBranch, MessageCircle, Network, Sparkles, Workflow,
+  Code2, GitBranch, MessageCircle, Network, Sparkles, Workflow, FlaskConical,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -127,7 +127,25 @@ export default function Home() {
         </div>
         <article className="project-lab">
           <div>
-            <div className="project-label"><span>LABORATÓRIO DE CONTEÚDO · EM DESENVOLVIMENTO</span><span>PROJETO 02</span></div>
+            <div className="project-label"><span>TELEGRAM + MAKE · MVP EM EVOLUÇÃO</span><span>PROJETO 02</span></div>
+            <h3>Assistente do Robson</h3>
+            <p>Um bot de atendimento com menu no Telegram e automações na nuvem. Testo caminhos para apresentar meus projetos, orientar visitantes e receber pedidos de contato com retorno humano.</p>
+            <div className="tech-row"><span>Telegram</span><span>Make</span><span>Webhooks</span><span>Automação</span></div>
+          </div>
+          <a className="project-link" href="/projetos/assistente-do-robson/">Conhecer o projeto <ArrowUpRight size={16}/></a>
+        </article>
+        <article className="project-lab">
+          <div>
+            <div className="project-label"><span>OPENCode 2 · PYTHON · TESTES</span><span>PROJETO 03</span></div>
+            <h3>Laboratório de LLMs</h3>
+            <p>Três modelos gratuitos receberam a mesma tarefa em sessões isoladas. No benchmark de Python, DeepSeek e Nemotron chegaram a 100/100; o GLM marcou 96/100. Registro método, limites e aprendizados.</p>
+            <div className="tech-row"><span>OpenCode</span><span>Python</span><span>Testes automatizados</span></div>
+          </div>
+          <a className="project-link" href="/projetos/laboratorio-llms/">Ver benchmark <FlaskConical size={16}/></a>
+        </article>
+        <article className="project-lab">
+          <div>
+            <div className="project-label"><span>LABORATÓRIO DE CONTEÚDO · EM DESENVOLVIMENTO</span><span>PROJETO 04</span></div>
             <h3>Robson Crypto Lab</h3>
             <p>Um espaço para estudar Bitcoin, cripto, trading e tecnologia na prática. Registro testes de estratégias, análises de dados e aprendizados sobre o mercado com transparência, sem promessas de lucro.</p>
           </div>
