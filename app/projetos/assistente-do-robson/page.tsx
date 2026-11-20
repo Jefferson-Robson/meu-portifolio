@@ -24,7 +24,7 @@ export default function AssistenteDoRobson() {
         <Link className={styles.back} href="/#projetos"><ArrowLeft size={16} /> Voltar aos projetos</Link>
       </header>
       <section className={styles.hero}>
-        <p className={styles.kicker}>Projeto 02 · Automação no-code · MVP em evolução</p>
+        <p className={styles.kicker}>Projeto 02 · Automação no-code · Desenvolvimento pausado</p>
         <h1>Assistente do Robson.</h1>
         <p>Um experimento real de atendimento pelo Telegram com automação no Make. A proposta é apresentar projetos, orientar interessados e organizar pedidos para retorno humano, começando pelo essencial.</p>
         <div className={styles.actions}>
@@ -53,9 +53,9 @@ export default function AssistenteDoRobson() {
           <div className={styles.sequence}>{etapas.map((etapa) => <div className={styles.step} key={etapa.number}><span>{etapa.number}</span><div><strong>{etapa.title}</strong><p>{etapa.text}</p></div></div>)}</div>
         </section>
         <section className={styles.section}>
-          <div className={styles.sectionHeader}><span className={styles.eyebrow}>04 / O que aprendi</span><h2>Botões funcionando não são o fim do processo.</h2><p>Nos testes iniciais, menu, botões e respostas foram exercitados. O próximo cuidado é validar continuamente a entrega dos pedidos, o tratamento de falhas, o uso de créditos e a correspondência entre o cenário real e a documentação.</p></div>
-          <div className={styles.notice}><ShieldCheck size={18} aria-hidden="true"/> O projeto está em evolução: não anuncio atendimento autônomo por IA nem um serviço público pronto. Tokens, IDs privados e conteúdo de conversas não são publicados. A integração de agendamento com Google Calendar é outro projeto, separado deste assistente.</div>
-          <a className={styles.link} href="https://blog.robsonlopes.tec.br/artigos/assistente-robson-make/" target="_blank" rel="noopener noreferrer">Conhecer decisões, limites e próximos passos <ArrowUpRight size={16}/></a>
+          <div className={styles.sectionHeader}><span className={styles.eyebrow}>04 / O que aprendi</span><h2>Botões funcionando não são o fim do processo.</h2><p>Nos testes iniciais, menu, botões e respostas foram exercitados. Ficou para uma eventual retomada validar a entrega dos pedidos, o tratamento de falhas, o uso de créditos e a correspondência entre o cenário real e a documentação.</p></div>
+          <div className={styles.notice}><ShieldCheck size={18} aria-hidden="true"/> Pausei o desenvolvimento em novembro de 2026 depois de experimentar assistentes prontos que já atendiam às minhas necessidades. Tokens, IDs privados e conteúdo de conversas não são publicados. A integração de agendamento com Google Calendar é outro projeto, separado deste assistente.</div>
+          <a className={styles.link} href="https://blog.robsonlopes.tec.br/artigos/por-que-pausei-meu-assistente/" target="_blank" rel="noopener noreferrer">Ler por que pausei o projeto <ArrowUpRight size={16}/></a>
         </section>
       </div>
     </main>

@@ -36,8 +36,7 @@ export default function Home() {
           <div className="eyebrow"><span className="status-dot" /> Tecnologia aplicada · processos · automação</div>
           <h1>Tecnologia para tornar processos mais <em>claros</em> e eficientes.</h1>
           <p className="hero-text">
-            Sou Robson Lopes. Construo soluções digitais para transformar processos manuais,
-            rotinas confusas e tarefas repetitivas em trabalho mais simples, organizado e eficiente.
+            Sou Robson Lopes, estudante de Engenharia de Software. Quero conhecer o trabalho de pessoas de várias profissões e desenvolver soluções para os problemas que elas encontram nas empresas.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#projetos">Ver soluções <ArrowDownRight size={18} /></a>
@@ -66,12 +65,11 @@ export default function Home() {
         <div className="section-number">01 / SOBRE</div>
         <div className="manifesto-copy">
           <p className="lead">
-            As melhores soluções não começam pela ferramenta. Começam entendendo onde o trabalho
-            perde tempo, clareza e ritmo.
+            Troquei Ciências Contábeis por Engenharia de Software porque sempre gostei mais do mundo digital.
           </p>
           <div className="two-columns">
-            <p>Minha experiência com processos me ensinou a identificar gargalos, tarefas repetitivas e pontos em que a informação se perde. É desse contexto que surgem as soluções que construo.</p>
-            <p>Uno desenvolvimento de software, automação e inteligência artificial para criar ferramentas claras, viáveis e alinhadas à rotina de quem vai usá-las.</p>
+            <p>Minha experiência com contabilidade, operações e logística é meu ponto de partida. Foi nessas rotinas que aprendi a perceber quando uma informação se perde ou alguém precisa fazer o mesmo trabalho duas vezes.</p>
+            <p>O que mais me atrai na tecnologia é poder aprender com outras profissões. Aqui compartilho o que estou estudando, os projetos que testo e as decisões que tomo pelo caminho.</p>
           </div>
         </div>
       </section>
@@ -127,9 +125,9 @@ export default function Home() {
         </div>
         <article className="project-lab">
           <div>
-            <div className="project-label"><span>TELEGRAM + MAKE · MVP EM EVOLUÇÃO</span><span>PROJETO 02</span></div>
+            <div className="project-label"><span>TELEGRAM + MAKE · DESENVOLVIMENTO PAUSADO</span><span>PROJETO 02</span></div>
             <h3>Assistente do Robson</h3>
-            <p>Um bot de atendimento com menu no Telegram e automações na nuvem. Testo caminhos para apresentar meus projetos, orientar visitantes e receber pedidos de contato com retorno humano.</p>
+            <p>Um bot de atendimento com menu no Telegram e automações na nuvem. Testei menus, botões e respostas para apresentar meus projetos e orientar visitantes.</p>
             <div className="tech-row"><span>Telegram</span><span>Make</span><span>Webhooks</span><span>Automação</span></div>
           </div>
           <a className="project-link" href="/projetos/assistente-do-robson/">Conhecer o projeto <ArrowUpRight size={16}/></a>
