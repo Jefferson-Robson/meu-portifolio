@@ -88,6 +88,15 @@ export default function Home() {
 
       <section className="projects" id="projetos">
         <div className="section-number">02 / PROJETOS</div>
+        <article className="project-lab">
+          <div>
+            <div className="project-label"><span>PRIMEIRA VERSÃO · EM VALIDAÇÃO</span><span>FERRAMENTA WEB</span></div>
+            <h3>Treino em Card</h3>
+            <p>Uma ferramenta que nasceu da minha rotina de corrida e caminhada. Personalize os dados e a foto do treino, acompanhe a prévia e gere um card vertical para os Stories. A primeira versão está recebendo ajustes a partir dos testes no celular.</p>
+            <div className="tech-row"><span>JavaScript</span><span>Canvas</span><span>Experiência mobile</span></div>
+          </div>
+          <a className="project-link" href="/treino/">Criar meu card <ArrowUpRight size={16} /></a>
+        </article>
         <div className="project-featured">
           <div className="project-copy">
             <div className="project-label"><span>MVP FUNCIONAL · EM VALIDAÇÃO</span><span>PROJETO 01</span></div>
