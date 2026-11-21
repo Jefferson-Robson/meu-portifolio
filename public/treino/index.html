@@ -8,8 +8,8 @@
   <title>Treino em Card · Robson Lopes</title>
   <link rel="icon" href="./assets/marca.svg" type="image/svg+xml">
   <link rel="preload" as="font" href="./assets/BarlowCondensed-BoldItalic.woff" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="./studio.css?v=fotos3">
-  <script defer src="./card.js"></script><script defer src="./studio.js?v=fotos3"></script>
+  <link rel="stylesheet" href="./studio.css?v=tempo4">
+  <script defer src="./card.js"></script><script defer src="./studio.js?v=tempo4"></script>
 </head>
 <body>
 <svg aria-hidden="true" class="symbols" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +55,15 @@
         </fieldset>
         <div class="inputs">
           <label for="distance">Distância<div class="field"><input id="distance" type="text" inputmode="decimal" value="5,00" autocomplete="off" maxlength="12" aria-describedby="distanceError"><span>km</span></div><small id="distanceError" class="error" hidden></small></label>
-          <label for="duration">Duração<div class="field"><input id="duration" type="text" inputmode="text" value="35:00" placeholder="35:00" autocomplete="off" maxlength="10" aria-describedby="timeHelp timeError"></div><small id="timeHelp">mm:ss ou h:mm:ss</small><small id="timeError" class="error" hidden></small></label>
+          <fieldset class="duration">
+            <legend>Duração</legend>
+            <div class="duration-parts">
+              <label class="field"><input id="durationHours" aria-label="Horas" aria-describedby="timeError" type="text" inputmode="numeric" autocomplete="off" placeholder="0"><span aria-hidden="true">h</span></label>
+              <label class="field"><input id="durationMinutes" aria-label="Minutos" aria-describedby="timeError" type="text" inputmode="numeric" autocomplete="off" value="35" placeholder="0"><span aria-hidden="true">min</span></label>
+              <label class="field"><input id="durationSeconds" aria-label="Segundos" aria-describedby="timeError" type="text" inputmode="numeric" autocomplete="off" placeholder="00"><span aria-hidden="true">s</span></label>
+            </div>
+            <small id="timeError" class="error" hidden></small>
+          </fieldset>
         </div>
         <div class="pace"><svg class="icon"><use href="#i-speed"/></svg><span>Ritmo médio</span><output id="pace">7:00 <small>min/km</small></output></div>
       </section>
@@ -95,7 +103,7 @@
 </dialog>
 <dialog id="guide" aria-labelledby="guideTitle">
   <div class="modal-head"><h2 id="guideTitle">Como usar</h2><button type="button" class="close" id="helpClose" aria-label="Fechar"><svg class="icon"><use href="#i-x"/></svg></button></div>
-  <ol><li>Escolha corrida ou caminhada e informe a distância e o tempo. Para 35 minutos, digite <strong>35:00</strong>.</li><li>Selecione um dos fundos ou use uma foto do seu aparelho. A prévia acompanha suas escolhas.</li><li>No Android, toque em <strong>Salvar meu card</strong> e escolha como salvar o PNG. No computador, use <strong>Baixar meu card</strong>.</li></ol>
+  <ol><li>Escolha corrida ou caminhada e informe a distância e o tempo. Para 35 minutos, digite <strong>35</strong> no campo <strong>min</strong>. Preencha horas e segundos quando precisar.</li><li>Selecione um dos fundos ou use uma foto do seu aparelho. A prévia acompanha suas escolhas.</li><li>No Android, toque em <strong>Salvar meu card</strong> e escolha como salvar o PNG. No computador, use <strong>Baixar meu card</strong>.</li></ol>
   <p><strong>No iPhone:</strong> toque em <strong>Salvar no app Fotos</strong>. No menu do iPhone, escolha <strong>Salvar Imagem</strong> ou <strong lang="en">Save Image</strong>. Depois, abra os Stories e selecione o card na galeria. Se o site mostrar a imagem em vez do menu, toque e segure o card para salvá-lo.</p>
 </dialog>
 </body></html>

@@ -35,3 +35,11 @@ dialog{max-width:min(29rem,calc(100% - 2rem));border-radius:1rem;background:#242
 #iphoneSaveHelp{margin-top:.5rem}
 #iphoneSaveHelp summary{padding:.65rem 0;color:var(--ink);font-weight:600;cursor:pointer}
 #iphoneSaveHelp summary:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+
+.inputs{display:flex;flex-wrap:wrap}
+.inputs>label{flex:1 1 6rem}
+.inputs>.duration{flex:2.5 1 13rem}
+.duration legend{margin-bottom:.37rem}
+.duration-parts{display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:.35rem}
+.duration-parts .field{margin:0;min-width:0;min-height:2.75rem;padding-inline:.5rem;cursor:text}
+.duration-parts .field span{font-size:.875rem}

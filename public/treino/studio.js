@@ -1,7 +1,8 @@
 'use strict';
 (() => {
   const $=id=>document.getElementById(id);
-  const poster=$('poster'), distance=$('distance'), duration=$('duration');
+  const poster=$('poster'), distance=$('distance');
+  const durationInputs=[$('durationHours'),$('durationMinutes'),$('durationSeconds')];
   const download=$('download'), share=$('share'), photoInput=$('photo');
   const saveDialog=$('saveCard'), saveImage=$('saveImage'), saveFile=$('saveFile');
   const mobileLayout=window.matchMedia('(pointer: coarse), (max-width: 650px)');
@@ -38,11 +39,39 @@
   function reportField(input,id,message){
     input.setAttribute('aria-invalid',String(Boolean(message)));$(id).textContent=message;$(id).hidden=!message;
   }
+  function readDurationFields(){
+    const parts=durationInputs.map(input=>input.value.trim());
+    const numbers=parts.map(part=>Number(part || 0));
+    const maxMinutes=numbers[0]>0 ? 59 : 999;
+    const limits=[99,maxMinutes,59];
+    const messages=['Use de 0 a 99 horas.', 'Use de 0 a '+maxMinutes+' minutos.', 'Use de 0 a 59 segundos.'];
+    const errors=parts.map((value,i)=>value!=='' && (!/^\d+$/.test(value) || numbers[i]>limits[i]));
+    const badIndex=errors.indexOf(true);
+    const total=numbers[0]*3600 + numbers[1]*60 + numbers[2];
+    const message=badIndex!==-1 ? messages[badIndex] : total===0 ? 'Informe uma duração maior que zero.' : '';
+    durationInputs.forEach((input,i)=>input.setAttribute('aria-invalid',String(errors[i] || total===0)));
+    $('timeError').textContent=message;
+    $('timeError').hidden=!message;
+    return message ? null : total;
+  }
+  function pasteDuration(event){
+    const text=event.clipboardData?.getData('text')?.trim();
+    if(!text || !text.includes(':'))return;
+    const total=TreinoCard.readDuration(text);
+    if(total===null)return;
+    event.preventDefault();
+    const hours=Math.floor(total/3600);
+    const minutes=Math.floor(total/60)%60;
+    const seconds=total%60;
+    durationInputs[0].value=hours ? String(hours) : '';
+    durationInputs[1].value=String(minutes);
+    durationInputs[2].value=seconds ? String(seconds).padStart(2,'0') : '';
+    update();
+  }
   function update(){
     const revision=++drawing;clearTimeout(timer);revokeExport();status('');
-    state.km=TreinoCard.readDistance(distance.value);state.seconds=TreinoCard.readDuration(duration.value);
+    state.km=TreinoCard.readDistance(distance.value);state.seconds=readDurationFields();
     reportField(distance,'distanceError',state.km===null?'Use de 0,001 a 999,999 km.':'');
-    reportField(duration,'timeError',state.seconds===null?'Informe um tempo maior que zero. Ex.: 35:00.':'');
     const valid=state.km!==null && state.seconds!==null;
     const pace=valid?TreinoCard.paceText(state.seconds,state.km):'—';
     $('pace').replaceChildren(document.createTextNode(pace+' '),Object.assign(document.createElement('small'),{textContent:'min/km'}));
@@ -72,9 +101,13 @@
   }
   for(const input of sportInputs)input.addEventListener('change',()=>{state.sport=input.value;update()});
   for(const input of themeInputs)input.addEventListener('change',()=>useTheme(input.value));
-  for(const input of [duration,distance])input.addEventListener('input',update);
+  distance.addEventListener('input',update);
+  for(const input of durationInputs){
+    input.addEventListener('input',update);
+    input.addEventListener('focus',()=>input.select());
+    input.addEventListener('paste',pasteDuration);
+  }
   distance.addEventListener('blur',()=>{if(state.km!==null){distance.value=state.km.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:3,useGrouping:false})}});
-  duration.addEventListener('blur',()=>{if(state.seconds!==null){duration.value=TreinoCard.timeText(state.seconds)}});
   $('removePhoto').addEventListener('click',()=>useTheme('pista'));
   photoInput.addEventListener('change',async()=>{
     const file=photoInput.files[0];if(!file)return;
