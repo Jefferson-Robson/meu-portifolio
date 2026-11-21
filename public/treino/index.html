@@ -8,8 +8,8 @@
   <title>Treino em Card · Robson Lopes</title>
   <link rel="icon" href="./assets/marca.svg" type="image/svg+xml">
   <link rel="preload" as="font" href="./assets/BarlowCondensed-BoldItalic.woff" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="./studio.css?v=salvar2">
-  <script defer src="./card.js"></script><script defer src="./studio.js?v=salvar2"></script>
+  <link rel="stylesheet" href="./studio.css?v=fotos3">
+  <script defer src="./card.js"></script><script defer src="./studio.js?v=fotos3"></script>
 </head>
 <body>
 <svg aria-hidden="true" class="symbols" xmlns="http://www.w3.org/2000/svg">
@@ -72,6 +72,7 @@
         <small id="photoInfo" role="status" hidden></small>
       </section>
       <div class="exports"><button type="button" id="download" class="primary" disabled><svg class="icon"><use href="#i-download"/></svg><span id="exportLabel">Baixar meu card</span></button><button type="button" class="share" id="share" hidden aria-label="Compartilhar imagem" title="Compartilhar imagem"><svg class="icon"><use href="#i-share"/></svg></button></div>
+      <p id="iphoneSaveTip" hidden>Para guardar no app <strong>Fotos</strong>, escolha <strong>Salvar Imagem</strong> ou <strong lang="en">Save Image</strong> no menu do iPhone.</p>
       <span class="privacy"><svg class="icon"><use href="#i-lock"/></svg>Seus dados e sua foto ficam no aparelho.</span>
       <div id="status" role="status" class="status"></div>
     </div>
@@ -84,12 +85,17 @@
   <p id="saveHint">Toque e segure a imagem para ver as opções de salvar do seu navegador.</p>
   <img id="saveImage" alt="Card do seu treino em PNG" width="1080" height="1920">
   <button id="saveShare" type="button" class="primary" hidden><svg class="icon"><use href="#i-share"/></svg>Salvar ou compartilhar</button>
+  <details id="iphoneSaveHelp" hidden>
+    <summary>A opção de salvar não apareceu?</summary>
+    <p>Toque e segure o card acima. Procure <strong>Salvar Imagem</strong> ou <strong lang="en">Save Image</strong>.</p>
+    <p>Se abriu o link dentro do Instagram e o menu não apareceu, tente abrir a página no Safari ou no Chrome.</p>
+  </details>
   <a id="saveFile" download>Baixar arquivo PNG</a>
   <p id="saveMessage" role="status"></p>
 </dialog>
 <dialog id="guide" aria-labelledby="guideTitle">
   <div class="modal-head"><h2 id="guideTitle">Como usar</h2><button type="button" class="close" id="helpClose" aria-label="Fechar"><svg class="icon"><use href="#i-x"/></svg></button></div>
-  <ol><li>Escolha corrida ou caminhada e informe a distância e o tempo. Para 35 minutos, digite <strong>35:00</strong>.</li><li>Selecione um dos fundos ou use uma foto do seu aparelho. A prévia acompanha suas escolhas.</li><li>No celular, toque em <strong>Salvar meu card</strong> e escolha como salvar o PNG. No computador, use <strong>Baixar meu card</strong>.</li></ol>
-  <p>No iPhone, escolha “Salvar Imagem” no menu de compartilhamento para encontrar o card no app Fotos.</p>
+  <ol><li>Escolha corrida ou caminhada e informe a distância e o tempo. Para 35 minutos, digite <strong>35:00</strong>.</li><li>Selecione um dos fundos ou use uma foto do seu aparelho. A prévia acompanha suas escolhas.</li><li>No Android, toque em <strong>Salvar meu card</strong> e escolha como salvar o PNG. No computador, use <strong>Baixar meu card</strong>.</li></ol>
+  <p><strong>No iPhone:</strong> toque em <strong>Salvar no app Fotos</strong>. No menu do iPhone, escolha <strong>Salvar Imagem</strong> ou <strong lang="en">Save Image</strong>. Depois, abra os Stories e selecione o card na galeria. Se o site mostrar a imagem em vez do menu, toque e segure o card para salvá-lo.</p>
 </dialog>
 </body></html>

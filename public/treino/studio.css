@@ -29,3 +29,9 @@ dialog{max-width:min(29rem,calc(100% - 2rem));border-radius:1rem;background:#242
 #saveShare{width:100%;min-height:2.9rem}
 #saveFile{display:flex;align-items:center;justify-content:center;color:var(--ink);min-height:2.8rem;text-underline-offset:.2rem}
 #saveMessage:empty{display:none}
+
+#iphoneSaveTip{margin:0;text-align:center;color:var(--muted);font-size:.94rem;line-height:1.45}
+#iphoneSaveTip strong,#iphoneSaveHelp strong{color:var(--ink)}
+#iphoneSaveHelp{margin-top:.5rem}
+#iphoneSaveHelp summary{padding:.65rem 0;color:var(--ink);font-weight:600;cursor:pointer}
+#iphoneSaveHelp summary:focus-visible{outline:2px solid var(--lime);outline-offset:2px}

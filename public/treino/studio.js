@@ -9,8 +9,16 @@
     (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);
   function useMobileSave(){return mobileLayout.matches || isAppleMobile}
   function updateExportLabel(){
-    $('exportLabel').textContent=useMobileSave()?'Salvar meu card':'Baixar meu card';
+    let label=useMobileSave()?'Salvar meu card':'Baixar meu card';
+    if(isAppleMobile)label='Salvar no app Fotos';
+    $('exportLabel').textContent=label;
     share.hidden=useMobileSave() || !canShareFile();
+  }
+  if(isAppleMobile){
+    $('iphoneSaveTip').hidden=false;
+    download.setAttribute('aria-describedby','iphoneSaveTip');
+    $('saveTitle').textContent='Salvar no app Fotos';
+    $('iphoneSaveHelp').hidden=false;
   }
   function canShareFile(){
     try{return !!(readyFile && navigator.share && navigator.canShare?.({files:[readyFile]}))}
@@ -94,9 +102,10 @@
     saveImage.src=readyURL;
     const native=canShareFile();
     $('saveShare').hidden=!native;
-    $('saveHint').textContent=native && isAppleMobile
-      ? 'Para guardar em Fotos, toque em “Salvar ou compartilhar” e escolha “Salvar Imagem”. Você também pode tocar e segurar o card.'
-      : 'Toque e segure a imagem para ver as opções de salvar do seu navegador.';
+    if(isAppleMobile){
+      $('saveHint').textContent='Toque e segure o card. Escolha “Salvar Imagem” ou “Save Image” para guardá-lo no app Fotos.';
+      $('iphoneSaveHelp').open=false;
+    }
     $('saveMessage').textContent='';
     if(!saveDialog.open){
       if(typeof saveDialog.showModal==='function')saveDialog.showModal();
@@ -110,16 +119,25 @@
   }
   async function sharePNG(){
     if(!readyFile)return;
+    const sharedFile=readyFile;
     try{
-      await navigator.share({files:[readyFile]});
+      await navigator.share({files:[sharedFile]});
     }catch(error){
-      if(error.name==='AbortError')return;
+      if(readyFile!==sharedFile)return;
+      if(error.name==='AbortError'){
+        if(isAppleMobile && !saveDialog.open)openSave();
+        return;
+      }
       openSave();
-      $('saveMessage').textContent='O menu de compartilhamento não abriu. Toque e segure a imagem ou use “Baixar arquivo PNG”.';
+      $('saveMessage').textContent='O menu de compartilhamento não abriu. Você pode salvar pela imagem acima.';
     }
   }
   download.addEventListener('click',()=>{
     if(!readyURL)return;
+    if(isAppleMobile && canShareFile()){
+      sharePNG();
+      return;
+    }
     if(useMobileSave())openSave();
     else saveFile.click();
   });
