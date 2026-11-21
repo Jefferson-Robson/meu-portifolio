@@ -8,8 +8,8 @@
   <title>Treino em Card · Robson Lopes</title>
   <link rel="icon" href="./assets/marca.svg" type="image/svg+xml">
   <link rel="preload" as="font" href="./assets/BarlowCondensed-BoldItalic.woff" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="./studio.css">
-  <script defer src="./card.js"></script><script defer src="./studio.js"></script>
+  <link rel="stylesheet" href="./studio.css?v=salvar2">
+  <script defer src="./card.js"></script><script defer src="./studio.js?v=salvar2"></script>
 </head>
 <body>
 <svg aria-hidden="true" class="symbols" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@
         <div class="photo-tools"><label for="photo" class="upload"><svg class="icon"><use href="#i-photo"/></svg><span id="photoLabel">Usar minha foto</span><input id="photo" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif"></label><button id="removePhoto" class="remove" type="button" hidden aria-label="Remover foto"><svg class="icon"><use href="#i-x"/></svg></button></div>
         <small id="photoInfo" role="status" hidden></small>
       </section>
-      <div class="exports"><button type="button" id="download" class="primary" disabled><svg class="icon"><use href="#i-download"/></svg>Baixar meu card</button><button type="button" class="share" id="share" hidden aria-label="Compartilhar imagem" title="Compartilhar imagem"><svg class="icon"><use href="#i-share"/></svg></button></div>
+      <div class="exports"><button type="button" id="download" class="primary" disabled><svg class="icon"><use href="#i-download"/></svg><span id="exportLabel">Baixar meu card</span></button><button type="button" class="share" id="share" hidden aria-label="Compartilhar imagem" title="Compartilhar imagem"><svg class="icon"><use href="#i-share"/></svg></button></div>
       <span class="privacy"><svg class="icon"><use href="#i-lock"/></svg>Seus dados e sua foto ficam no aparelho.</span>
       <div id="status" role="status" class="status"></div>
     </div>
@@ -79,9 +79,17 @@
   <noscript>Ative o JavaScript para personalizar e baixar seu card.</noscript>
 </main>
 <footer class="shell"><span>Treino em Card</span><a href="https://robsonlopes.tec.br/">Robson Lopes</a></footer>
+<dialog id="saveCard" aria-labelledby="saveTitle" aria-describedby="saveHint">
+  <div class="modal-head"><h2 id="saveTitle">Salvar meu card</h2><button type="button" class="close" id="saveClose" aria-label="Fechar"><svg class="icon"><use href="#i-x"/></svg></button></div>
+  <p id="saveHint">Toque e segure a imagem para ver as opções de salvar do seu navegador.</p>
+  <img id="saveImage" alt="Card do seu treino em PNG" width="1080" height="1920">
+  <button id="saveShare" type="button" class="primary" hidden><svg class="icon"><use href="#i-share"/></svg>Salvar ou compartilhar</button>
+  <a id="saveFile" download>Baixar arquivo PNG</a>
+  <p id="saveMessage" role="status"></p>
+</dialog>
 <dialog id="guide" aria-labelledby="guideTitle">
   <div class="modal-head"><h2 id="guideTitle">Como usar</h2><button type="button" class="close" id="helpClose" aria-label="Fechar"><svg class="icon"><use href="#i-x"/></svg></button></div>
-  <ol><li>Escolha corrida ou caminhada e informe a distância e o tempo. Para 35 minutos, digite <strong>35:00</strong>.</li><li>Selecione um dos fundos ou use uma foto do seu aparelho. A prévia acompanha suas escolhas.</li><li>Toque em <strong>Baixar meu card</strong>. Abra a imagem nos Stories ou no Edits. Em celulares compatíveis, o botão de compartilhar também envia o PNG a outros apps.</li></ol>
-  <p>Se o celular abrir a imagem em outra aba, toque e segure para salvá-la.</p>
+  <ol><li>Escolha corrida ou caminhada e informe a distância e o tempo. Para 35 minutos, digite <strong>35:00</strong>.</li><li>Selecione um dos fundos ou use uma foto do seu aparelho. A prévia acompanha suas escolhas.</li><li>No celular, toque em <strong>Salvar meu card</strong> e escolha como salvar o PNG. No computador, use <strong>Baixar meu card</strong>.</li></ol>
+  <p>No iPhone, escolha “Salvar Imagem” no menu de compartilhamento para encontrar o card no app Fotos.</p>
 </dialog>
 </body></html>

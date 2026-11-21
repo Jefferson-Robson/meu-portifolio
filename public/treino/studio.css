@@ -22,3 +22,10 @@ dialog{max-width:min(29rem,calc(100% - 2rem));border-radius:1rem;background:#242
 @media(max-width:800px){.workspace{grid-template-columns:minmax(0,.9fr) minmax(18rem,1fr)}.panel{padding:1rem}.shell{width:calc(100% - 2.5rem)}}
 @media(max-width:650px){.shell{width:calc(100% - 2rem)}.mast-inner{min-height:3.9rem;gap:.6rem}.brand{font-size:1.2rem;gap:.5rem}.brand img{width:30px;height:30px}.byline{display:none}.help{padding:.42rem .6rem}.intro p{font-size:1rem}.intro{margin:1.5rem 0 1.1rem}.workspace{display:flex;flex-direction:column;gap:1rem}.stage{padding:1rem}.stage canvas{width:min(49vw,12.8rem)}.preview-head,.preview-foot{padding:.55rem .85rem}.preview-foot{font-size:.78rem}.panel{padding:1rem 1.1rem}.controls{gap:.8rem}footer.shell{margin-top:1.5rem}.themes .thumb{height:3rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+#saveCard{width:min(27rem,calc(100% - 1.5rem));max-height:92vh;max-height:92dvh;overflow:auto}
+#saveCard p{margin:.8rem 0;line-height:1.4}
+#saveImage{display:block;width:auto;height:auto;max-width:100%;max-height:40vh;margin:.8rem auto;object-fit:contain;border-radius:.45rem;-webkit-touch-callout:default}
+#saveShare{width:100%;min-height:2.9rem}
+#saveFile{display:flex;align-items:center;justify-content:center;color:var(--ink);min-height:2.8rem;text-underline-offset:.2rem}
+#saveMessage:empty{display:none}

@@ -3,12 +3,27 @@
   const $=id=>document.getElementById(id);
   const poster=$('poster'), distance=$('distance'), duration=$('duration');
   const download=$('download'), share=$('share'), photoInput=$('photo');
+  const saveDialog=$('saveCard'), saveImage=$('saveImage'), saveFile=$('saveFile');
+  const mobileLayout=window.matchMedia('(pointer: coarse), (max-width: 650px)');
+  const isAppleMobile=/iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform==='MacIntel' && navigator.maxTouchPoints>1);
+  function useMobileSave(){return mobileLayout.matches || isAppleMobile}
+  function updateExportLabel(){
+    $('exportLabel').textContent=useMobileSave()?'Salvar meu card':'Baixar meu card';
+    share.hidden=useMobileSave() || !canShareFile();
+  }
+  function canShareFile(){
+    try{return !!(readyFile && navigator.share && navigator.canShare?.({files:[readyFile]}))}
+    catch{return false}
+  }
   const sportInputs=[...document.querySelectorAll('[name="sport"]')];
   const themeInputs=[...document.querySelectorAll('[name="theme"]')];
   const state={sport:'corrida',theme:'pista',km:5,seconds:2100,photo:null,track:null};
   let drawing=0, photoToken=0, timer=0, readyFile=null, readyURL=null, assetsReady=false, photoPending=false;
   const status=text=>{$('status').textContent=text};
   function revokeExport(){
+    if(saveDialog.open)closeSave();
+    saveFile.removeAttribute('href');
     if(readyURL) URL.revokeObjectURL(readyURL);
     readyFile=null;readyURL=null;download.disabled=true;share.disabled=true;
   }
@@ -34,9 +49,10 @@
       readyURL=URL.createObjectURL(blob);
       readyFile=typeof File==='function'?new File([blob],filename,{type:'image/png'}):null;
       download.disabled=false;
-      let canShare=false;
-      try{canShare=!!(readyFile && navigator.share && navigator.canShare?.({files:[readyFile]}))}catch{}
-      share.hidden=!canShare;share.disabled=!canShare;
+      saveFile.href=readyURL;
+      saveFile.download=filename;
+      share.disabled=!canShareFile();
+      updateExportLabel();
     },'image/png'),140);
   }
   function photoMessage(message,error=false){$('photoInfo').textContent=message;$('photoInfo').hidden=!message;$('photoInfo').classList.toggle('error',error)}
@@ -73,16 +89,51 @@
       if(token===photoToken){photoInput.value='';photoPending=false;update()}
     }
   });
+  function openSave(){
+    if(!readyURL)return;
+    saveImage.src=readyURL;
+    const native=canShareFile();
+    $('saveShare').hidden=!native;
+    $('saveHint').textContent=native && isAppleMobile
+      ? 'Para guardar em Fotos, toque em “Salvar ou compartilhar” e escolha “Salvar Imagem”. Você também pode tocar e segurar o card.'
+      : 'Toque e segure a imagem para ver as opções de salvar do seu navegador.';
+    $('saveMessage').textContent='';
+    if(!saveDialog.open){
+      if(typeof saveDialog.showModal==='function')saveDialog.showModal();
+      else saveDialog.setAttribute('open','');
+    }
+  }
+  function closeSave(){
+    if(typeof saveDialog.close==='function')saveDialog.close();
+    else saveDialog.removeAttribute('open');
+    saveImage.removeAttribute('src');
+  }
+  async function sharePNG(){
+    if(!readyFile)return;
+    try{
+      await navigator.share({files:[readyFile]});
+    }catch(error){
+      if(error.name==='AbortError')return;
+      openSave();
+      $('saveMessage').textContent='O menu de compartilhamento não abriu. Toque e segure a imagem ou use “Baixar arquivo PNG”.';
+    }
+  }
   download.addEventListener('click',()=>{
     if(!readyURL)return;
-    const a=document.createElement('a');a.href=readyURL;a.download='treino-em-card-'+state.sport+'.png';
-    a.target='_blank';a.rel='noopener';document.body.append(a);a.click();a.remove();
-    status('PNG pronto. Se a imagem abriu em outra aba, toque e segure para salvar.');
+    if(useMobileSave())openSave();
+    else saveFile.click();
   });
-  share.addEventListener('click',async()=>{
-    if(!readyFile)return;
-    try{await navigator.share({files:[readyFile]})}catch(e){if(e.name!=='AbortError') status('Use Baixar meu card para salvar a imagem.')}
+  saveFile.addEventListener('click',()=>{
+    const message='O navegador recebeu o pedido de download. Procure o PNG em Downloads.';
+    if(saveDialog.open)$('saveMessage').textContent=message;
+    else status(message);
   });
+  share.addEventListener('click',sharePNG);
+  $('saveShare').addEventListener('click',sharePNG);
+  $('saveClose').addEventListener('click',closeSave);
+  saveDialog.addEventListener('close',()=>{if(!saveDialog.open)saveImage.removeAttribute('src')});
+  updateExportLabel();
+  mobileLayout.addEventListener?.('change',updateExportLabel);
   const guide=$('guide');$('helpOpen').addEventListener('click',()=>guide.showModal());$('helpClose').addEventListener('click',()=>guide.close());
   guide.addEventListener('click',e=>{if(e.target===guide){const r=guide.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)guide.close()}});
   function loadImage(url){return new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=reject;img.src=url})}
